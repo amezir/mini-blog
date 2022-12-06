@@ -54,6 +54,14 @@
 ?>
       </ul>
     </header>
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="miniblog.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="archives.php">Archives</a></li>
+  </ol>
+</nav>
+
 <?php  
 echo "<h1 class='text-center'>Les Archives:</h1>";
             $requete="SELECT * FROM articles";

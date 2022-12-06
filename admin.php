@@ -54,6 +54,13 @@
 ?>
       </ul>
     </header>
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item txtfrm"><a href="#">Home</a></li>
+    <li class="breadcrumb-item txtfrm"><a href="#">Admin</a></li>
+  </ol>
+</nav> 
 <?php     
    
    if (isset($_SESSION["login"])){

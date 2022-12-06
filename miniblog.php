@@ -54,6 +54,13 @@
 ?>
       </ul>
     </header>
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item txtfrm"><a href="#">Home</a></li>
+  </ol>
+</nav>    
+
 <?php              
 echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
             $requete="SELECT * FROM articles ORDER BY id_articles DESC LIMIT 3 ";
@@ -105,6 +112,7 @@ echo "<div class='row row-cols-1 row-cols-md-3 g-4'>";
     <div class='card-body'>
       <h5 class='card-title'>{$artciles["articles_titre"]}</h5>
       <p class='card-text txtfrm'>{$artciles["articles_texte"]}</p>
+      <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir les commentaires</a>
     </div>
     <div class='card-footer'>
       <small class='text-muted'>Créateur: {$artciles["articles_createur"]} {$artciles["articles_heure"]}</small>
