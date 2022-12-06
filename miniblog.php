@@ -61,7 +61,7 @@ echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
             $stmt=$db->query($requete);
             $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
 
-            foreach($resultat as $artciles){
+            foreach($resultat as $articles){
 
                 echo "<div class='container divcard'>
                 <div class='row'>
@@ -75,9 +75,10 @@ echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
                   <div class='card-img-overlay'><span class='badge badge-warning text-uppercase'>New</span></div>
                 </div>
                 <div class='card-body bg-muted'>
-                  <h5 class='card-title'>{$artciles["articles_titre"]}</h5>
-                  <p class='card-text mt-4 txtfrm'>{$artciles["articles_texte"]}</p>
-                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$artciles["articles_createur"]} {$artciles["articles_heure"]}</h6>
+                  <h5 class='card-title'>{$articles["articles_titre"]}</h5>
+                  <p class='card-text mt-4 txtfrm'>{$articles["articles_texte"]}</p>
+                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</h6>
+                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}'>Voir l'article</a>
                 </div>
                 </div>
                 </div>
