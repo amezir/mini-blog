@@ -17,7 +17,7 @@
         <h1 class="logo"><a href="miniblog.php">MyBlog</a></h1>
       <ul class="main-nav">
 
-<?php
+      <?php
             include ("connexion.php");
             session_start();
 
@@ -35,10 +35,21 @@
                    echo('<br>');
                }
                
-               if (isset($_SESSION["login"]))
-               { 
-               echo "Compte: {$_SESSION["login"]} <a href='logout.php'>Déconnexion</a> <BR>";
-               }
+               if (isset($_SESSION["login"])){
+          
+                // Si l'utilisateur logué est l'admin
+                if ($_SESSION["id"] == 1){
+                  echo "<a href='admin.php'>Gérer le miniblog</a>";
+                  echo('<br>');
+                }else {}
+
+
+              }else {}
+
+              if (isset($_SESSION["login"]))
+              { 
+              echo "<p>Compte: {$_SESSION["login"]} </p><a href='logout.php'>Déconnexion</a> <BR>";
+              }
 
 ?>
       </ul>
