@@ -23,12 +23,10 @@
 
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
-                   echo('<a href="miniblog.php">Home</a> ');
                    echo('<a href="archives.php">Les Archives</a> ');
                    
                }else{
                 // Si l'utilisateur non logué
-                echo('<a href="miniblog.php">Home</a> ');
                    echo('<a href="archives.php">Les Archives</a> ');
                    echo('<a href="login.php">Connexion</a> ');
                    echo('<a href="inscription.php">Inscription</a>');
@@ -39,7 +37,7 @@
           
                 // Si l'utilisateur logué est l'admin
                 if ($_SESSION["id"] == 1){
-                  echo "<a href='admin.php'>Gérer le miniblog</a>";
+                  echo "<a href='admin.php' class='text-decoration-line-through'>Gérer le miniblog</a>";
                   echo('<br>');
                 }else {}
 

@@ -87,6 +87,78 @@ foreach($resultat as $articles){
 }
 
 ?>   
+<?php
+echo ("<h1 class='texte-align-middle'>Commentaire</h1>");
+if(isset($_SESSION['login']))  { 
+  // Si l'utilisateur logué
+  $requete="SELECT * FROM articles,commentaire,utilisateurs WHERE id_articles={$_GET["id_articles"]}  AND ext_articles_commentaire=id_articles AND ext_utilisateur_commentaire=id_miniblog";
+$stmt=$db->query($requete);
+$commentaire=$stmt->fetchall(PDO::FETCH_ASSOC);
+foreach($commentaire as $com){
+echo "
+<div class='card'>
+  <div class='card-header'>
+  {$com["id_miniblog"]}
+  </div>
+  <div class='card-body'>
+    <blockquote class='blockquote mb-0'>
+      <p>{$com["texte_commentaire"]}</p>
+      <footer class='blockquote-footer'>{$com["date_commentaire"]}</footer>
+    </blockquote>
+  </div>
+</div>";
+}
+
+
+ }else{
+  
+  // Si l'utilisateur non logué
+  $requete="SELECT * FROM articles,commentaire,utilisateurs WHERE id_articles={$_GET["id_articles"]}  AND ext_articles_commentaire=id_articles AND ext_utilisateur_commentaire=id_miniblog";
+  $stmt=$db->query($requete);
+  $commentaire=$stmt->fetchall(PDO::FETCH_ASSOC);
+  foreach($commentaire as $com){
+  echo "
+  <div class='card'>
+    <div class='card-header'>
+    {$com["id_miniblog"]}
+    </div>
+    <div class='card-body'>
+      <blockquote class='blockquote mb-0'>
+        <p>{$com["texte_commentaire"]}</p>
+        <footer class='text-muted'>{$com["date_commentaire"]}</footer>
+      </blockquote>
+    </div>
+  </div>";
+  }
+ }
+
+?>
+
+<?php
+
+if(isset($_SESSION['login']))  { 
+  // Si l'utilisateur logué
+     echo("<form action='traitre_com.php?id_articles={$_GET["id_articles"]}' method=POST>
+
+     <div>
+         <label><span>Texte</span></label>
+         <br>
+         <textarea class='arg' type='text' name='texte' cols='40'
+                     rows='5' maxlength='280' spellcheck='true'></textarea>
+     </div>
+ 
+     <div>
+         <input type='submit' value='Commenter'>
+     </div>
+ 
+ </form>
+ </div> ");
+
+ }else{
+  // Si l'utilisateur non logué
+ }
+
+?>
 
 </body>
 </html>

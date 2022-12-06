@@ -23,11 +23,11 @@
 
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
-                   echo('<a href="archives.php">Les Archives</a> ');
+                   echo('<a href="archives.php" class="text-decoration-line-through">Les Archives</a> ');
                    
                }else{
                 // Si l'utilisateur non logué
-                   echo('<a href="archives.php">Les Archives</a> ');
+                   echo('<a href="archives.php" class="text-decoration-line-through">Les Archives</a> ');
                    echo('<a href="login.php">Connexion</a> ');
                    echo('<a href="inscription.php">Inscription</a>');
                    echo('<br>');
