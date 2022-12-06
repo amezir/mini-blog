@@ -22,7 +22,7 @@
 
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
-                   echo('<a href="login.php">Home</a> ');
+                   echo('<a href="miniblog.php">Home</a> ');
                    echo('<a href="archives.php">Les Archives</a> ');
                    
                }else{
