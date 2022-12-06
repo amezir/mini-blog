@@ -23,12 +23,10 @@
 
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
-                   echo('<a href="miniblog.php">Home</a> ');
                    echo('<a href="archives.php">Les Archives</a> ');
                    
                }else{
                 // Si l'utilisateur non logué
-                echo('<a href="miniblog.php">Home</a> ');
                    echo('<a href="archives.php">Les Archives</a> ');
                    echo('<a href="login.php">Connexion</a> ');
                    echo('<a href="inscription.php">Inscription</a>');
@@ -57,7 +55,7 @@
 
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item txtfrm"><a href="#">Home</a></li>
+    <li class="breadcrumb-item txtfrm"><a href="miniblog.php">Home</a></li>
   </ol>
 </nav>    
 

@@ -57,8 +57,8 @@
 
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item txtfrm"><a href="#">Home</a></li>
-    <li class="breadcrumb-item txtfrm"><a href="#">Admin</a></li>
+    <li class="breadcrumb-item txtfrm"><a href="miniblog.php">Home</a></li>
+    <li class="breadcrumb-item txtfrm"><a href="admin.php">Admin</a></li>
   </ol>
 </nav> 
 <?php     
