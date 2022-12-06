@@ -103,7 +103,7 @@ echo "
   <div class='card-body'>
     <blockquote class='blockquote mb-0'>
       <p>{$com["texte_commentaire"]}</p>
-      <footer class='blockquote-footer'>{$com["date_commentaire"]}</footer>
+      <footer class='text-muted'>{$com["date_commentaire"]}</footer>
     </blockquote>
   </div>
 </div>";
