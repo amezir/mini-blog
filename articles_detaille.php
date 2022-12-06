@@ -88,7 +88,7 @@ foreach($resultat as $articles){
 
 ?>   
 <?php
-echo ("<h1 class='texte-align-middle'>Commentaire</h1>");
+echo ("<h1 class='text-center'>Commentaire</h1>");
 if(isset($_SESSION['login']))  { 
   // Si l'utilisateur logué
   $requete="SELECT * FROM articles,commentaire,utilisateurs WHERE id_articles={$_GET["id_articles"]}  AND ext_articles_commentaire=id_articles AND ext_utilisateur_commentaire=id_miniblog";
