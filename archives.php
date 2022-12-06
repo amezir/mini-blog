@@ -61,7 +61,7 @@ echo "<h1 class='text-center'>Les Archives:</h1>";
             $stmt=$db->query($requete);
             $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
 
-            foreach($resultat as $artciles){
+            foreach($resultat as $articles){
                 echo "<div class='container divcard'>
                 <div class='row'>
                 <div class='col'>
@@ -71,16 +71,17 @@ echo "<h1 class='text-center'>Les Archives:</h1>";
                     <rect width='100%' height='100%' fill='#434e58'></rect>
                     <text x='50%' y='50%' fill='#f9f9f9' dy='.3em'></text>
                   </svg>
-                  <div class='card-img-overlay'><span class='badge badge-warning text-uppercase'>Articles</span></div>
+                  <div class='card-img-overlay'><span class='badge badge-warning text-uppercase'>New</span></div>
                 </div>
                 <div class='card-body bg-muted'>
-                  <h5 class='card-title'>{$artciles["articles_titre"]}</h5>
-                  <p class='card-text mt-4 txtfrm'>{$artciles["articles_texte"]}</p>
-                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$artciles["articles_createur"]} {$artciles["articles_heure"]}</h6>
+                  <h5 class='card-title'>{$articles["articles_titre"]}</h5>
+                  <p class='card-text mt-4 txtfrm'>{$articles["articles_texte"]}</p>
+                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</h6>
+                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir les commentaires</a>
                 </div>
                 </div>
                 </div>
-                </div> \n";
+                </div>  \n";
             }
 
 ?>   

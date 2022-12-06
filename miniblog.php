@@ -78,11 +78,11 @@ echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
                   <h5 class='card-title'>{$articles["articles_titre"]}</h5>
                   <p class='card-text mt-4 txtfrm'>{$articles["articles_texte"]}</p>
                   <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</h6>
-                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}'>Voir l'article</a>
+                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir les commentaires</a>
                 </div>
                 </div>
                 </div>
-                </div> \n";
+                </div>  \n";
             }
 ?>   
 
