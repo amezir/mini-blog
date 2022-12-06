@@ -98,7 +98,7 @@ foreach($commentaire as $com){
 echo "
 <div class='card'>
   <div class='card-header'>
-  {$com["id_miniblog"]}
+  {$com["miniblog_login"]}
   </div>
   <div class='card-body'>
     <blockquote class='blockquote mb-0'>
