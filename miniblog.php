@@ -94,12 +94,12 @@ echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
 
 <?php  
 echo "<h1 class='text-center'>Tous articles:</h1>";
-            $requete="SELECT * FROM articles";
+$requete="SELECT * FROM articles ";
 
             $stmt=$db->query($requete);
             $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
 echo "<div class='row row-cols-1 row-cols-md-3 g-4'>";
-            foreach($resultat as $artciles){
+            foreach($resultat as $articles){
                 echo "
                 <div class='col'>
                 <div class='card h-100'>
@@ -108,16 +108,15 @@ echo "<div class='row row-cols-1 row-cols-md-3 g-4'>";
                 <text x='50%' y='50%' fill='#f9f9f9' dy='.3em'></text>
               </svg>
     <div class='card-body'>
-      <h5 class='card-title'>{$artciles["articles_titre"]}</h5>
-      <p class='card-text txtfrm'>{$artciles["articles_texte"]}</p>
+      <h5 class='card-title'>{$articles["articles_titre"]}</h5>
+      <p class='card-text txtfrm'>{$articles["articles_texte"]}</p>
       <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir les commentaires</a>
     </div>
     <div class='card-footer'>
-      <small class='text-muted'>Créateur: {$artciles["articles_createur"]} {$artciles["articles_heure"]}</small>
+      <small class='text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</small>
     </div>
     </div>
-  </div>\n";
-            }
+  </div>\n"; }
 echo "</div>";
 ?>   
 
