@@ -24,7 +24,7 @@ echo "Vout êtes déja connectée avec le compte : {$_SESSION["login"]} <a href=
 
 
 <!--Formulaire -->
-<h1 class="title-contact">Login</h1>
+<h1 class="title-contact">Connexion</h1>
     <section class="formu" id="Formulaire">
         <main class="styleform">
             <form action="traite_login.php">
