@@ -94,8 +94,7 @@ echo "<h1 class='text-center'>Les 3 dernier articles:</h1>";
 
 <?php  
 echo "<h1 class='text-center'>Tous articles:</h1>";
-$requete="SELECT * FROM articles ";
-
+            $requete="SELECT * FROM articles ";
             $stmt=$db->query($requete);
             $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
 echo "<div class='row row-cols-1 row-cols-md-3 g-4'>";
