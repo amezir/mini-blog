@@ -14,7 +14,7 @@
 </head>
 <body>
 <header class="header">
-        <h1 class="logo"><a href="miniblog.php">MyBlog</a></h1>
+        <h1 class="logo"><a href="index.php">MyBlog</a></h1>
       <ul class="main-nav">
 
       <?php
@@ -55,7 +55,7 @@
 
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="miniblog.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
     <li class="breadcrumb-item"><a href="archives.php">Archives</a></li>
   </ol>
 </nav>

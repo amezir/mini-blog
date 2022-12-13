@@ -45,7 +45,7 @@ if (isset($_GET["err"]) && $_GET["err"]=="mdp") { echo "ATTENTION MAUVAIS MOT DE
                <div class="formtextg">
                   <p class="txtfrm">Vous n'êtes pas membre ? <a href="inscription.php" class="txtfrm">Inscrivez-vous maintenant</a></p>
 
-<p class="txtfrm" >Voir <a href="miniblog.php" class="txtfrm"> Continuer en tant que visiteur</a></p>
+<p class="txtfrm" >Voir <a href="index.php" class="txtfrm"> Continuer en tant que visiteur</a></p>
                </div> 
 
                 <div>

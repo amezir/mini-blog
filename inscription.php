@@ -46,7 +46,7 @@ echo "Vout êtes déja connectée avec le compte : {$_SESSION["login"]} <a href=
                <div class="formtextg">
                   <p class="txtfrm">Vous êtes déjà membre ? <a href="login.php" class="txtfrm">Se connecter maintenant! </a></p>
 
-<p class="txtfrm" >Voir <a href="miniblog.php" class="txtfrm"> Continuer en tant que visiteur</a></p>
+<p class="txtfrm" >Voir <a href="index.php" class="txtfrm"> Continuer en tant que visiteur</a></p>
                </div> 
 
                 <div>

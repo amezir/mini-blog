@@ -15,7 +15,7 @@ if ($stmt->rowcount()==1){
 	if (password_verify($_GET["pwd"],$result["miniblog_mot_de_passe"])){
 		$_SESSION["login"]=$_GET["login"];
 		$_SESSION["id"]=$result["id_miniblog"];
-        header ('Location:miniblog.php');
+        header ('Location:index.php');
 	} else {header ('Location:login.php?err=mdp');}
 
 } else {header ('Location:login.php?err=login');}
