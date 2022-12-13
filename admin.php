@@ -77,7 +77,7 @@
         <label><span>Texte</span></label>
         <br>
         <textarea class='arg' type='text' name='texte' cols='40'
-                    rows='5' maxlength='500' spellcheck='true'></textarea>
+                    rows='5' maxlength='2000' spellcheck='true'></textarea>
     </div>
 
     <div>

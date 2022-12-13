@@ -8,6 +8,7 @@ $stmt->bindParam(':articles_texte',$_GET["texte"] , PDO::PARAM_STR);
 $stmt->bindParam(':articles_createur',$_GET["createur"] , PDO::PARAM_STR);
 
 $stmt->execute();
-echo ('Articles envoyé');
+header ('Location:admin.php');
+
 
 ?>
