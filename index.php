@@ -55,18 +55,18 @@
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1558258021-971dd2148be5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="bd-placeholder-img" alt="" width="100%"
+          <img src="https://images.unsplash.com/photo-1558258021-971dd2148be5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="bd-placeholder-img img-fluid" alt="" width="100%"
             height="100%">
         </div>
 
         <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1609102026400-3c0ca378e4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80" class="bd-placeholder-img" alt="" width="100% "
+          <img src="https://images.unsplash.com/photo-1609102026400-3c0ca378e4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80" class="bd-placeholder-img img-fluid" alt="" width="100% "
             height="100%">
           </svg>
         </div>
 
         <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1554167725-89bf8ab26514?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="bd-placeholder-img" alt="" width="100% "
+          <img src="https://images.unsplash.com/photo-1554167725-89bf8ab26514?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="bd-placeholder-img img-fluid" alt="" width="100% "
             height="100%">
           </svg>
         </div>
