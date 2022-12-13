@@ -77,7 +77,7 @@ echo "<h1 class='text-center'>Les Archives:</h1>";
                     <rect width='100%' height='100%' fill='#434e58'></rect>
                     <text x='50%' y='50%' fill='#f9f9f9' dy='.3em'></text>
                   </svg>
-                  <div class='card-img-overlay'><span class='badge badge-warning text-uppercase'>New</span></div>
+                  <div class='card-img-overlay'><span class='badge badge-warning text-uppercase'>Article</span></div>
                 </div>
                 <div class='card-body bg-muted'>
                   <h5 class='card-title'>{$articles["articles_titre"]}</h5>
