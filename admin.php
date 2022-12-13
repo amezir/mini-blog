@@ -68,7 +68,11 @@
     // Si l'utilisateur logué est l'admin
     if ($_SESSION["id"] == 1){
     echo("        <form action='traitre_admin.php'>
-
+    <div>
+        <label><span>Créateur</span></label>
+        <br>
+        <input type=text name='createur' placeholder='{$_SESSION["login"]}' readonly required>
+    </div>
     <div>
         <label><span>Titre</span></label>
         <br>
@@ -80,12 +84,6 @@
         <br>
         <textarea class='arg' type='text' name='texte' cols='40'
                     rows='5' maxlength='2000' spellcheck='true'></textarea>
-    </div>
-
-    <div>
-        <label><span>Créateur</span></label>
-        <br>
-        <input type=text name='createur' placeholder='{$_SESSION["login"]}' readonly required>
     </div>
 
     <div>
