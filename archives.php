@@ -17,17 +17,17 @@
         <h1 class="logo"><a href="index.php">MyBlog</a></h1>
       <ul class="main-nav">
 
-      <?php
+<?php
+
             include ("connexion.php");
             session_start();
-
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
-                   echo('<a href="archives.php" class="text-decoration-line-through">Les Archives</a> ');
+                   echo('<a href="archives.php">Les Archives</a> ');
                    
                }else{
                 // Si l'utilisateur non logué
-                   echo('<a href="archives.php" class="text-decoration-line-through">Les Archives</a> ');
+                   echo('<a href="archives.php">Les Archives</a> ');
                    echo('<a href="login.php">Connexion</a> ');
                    echo('<a href="inscription.php">Inscription</a>');
                    echo('<br>');
@@ -46,7 +46,7 @@
 
               if (isset($_SESSION["login"]))
               { 
-              echo "<p>Compte: {$_SESSION["login"]} </p><a href='logout.php'>Déconnexion</a> <BR>";
+              echo "<a href='profil_detaille.php?id_miniblog={$_SESSION["id"]}'>Compte: {$_SESSION["login"]} </a><a href='logout.php'>Déconnexion</a> <BR>";
               }
 
 ?>

@@ -16,10 +16,11 @@
 <header class="header">
         <h1 class="logo"><a href="index.php">MyBlog</a></h1>
       <ul class="main-nav">
+
 <?php
+
             include ("connexion.php");
             session_start();
-
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
                    echo('<a href="archives.php">Les Archives</a> ');
@@ -45,7 +46,7 @@
 
               if (isset($_SESSION["login"]))
               { 
-              echo "<p>Compte: {$_SESSION["login"]} </p><a href='logout.php'>Déconnexion</a> <BR>";
+              echo "<a href='profil_detaille.php?id_miniblog={$_SESSION["id"]}'>Compte: {$_SESSION["login"]} </a><a href='logout.php'>Déconnexion</a> <BR>";
               }
 
 ?>

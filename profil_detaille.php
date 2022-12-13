@@ -52,55 +52,65 @@
 ?>
       </ul>
     </header>
-      </ul>
-    </header>
 
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item txtfrm"><a href="index.php">Home</a></li>
-    <li class="breadcrumb-item txtfrm"><a href="admin.php">Admin</a></li>
   </ol>
-</nav> 
-<?php     
-   
-   if (isset($_SESSION["login"])){
+</nav>  
 
-    // Si l'utilisateur logué est l'admin
-    if ($_SESSION["id"] == 1){
-    echo("        <form action='traitre_admin.php'>
 
-    <div>
-        <label><span>Titre</span></label>
-        <br>
-        <input type=text name='titre' placeholder='Titre' required>
+<div class="container mt-5">
+    
+    <div class="row d-flex justify-content-center">
+        
+        <div class="col-md-7">
+            
+            <div class="card p-3 py-4">
+                
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="100" class="rounded-circle">
+                </div>
+                
+                <div class="text-center mt-3">
+                    <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span>
+                    <h5 class="mt-2 mb-0">Alexender Schidmt</h5>
+                    <span>UI/UX Designer</span>
+                    
+                    <div class="px-4 mt-1">
+                        <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    
+                    </div>
+                    
+                     <ul class="social-list">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-dribbble"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-linkedin"></i></li>
+                        <li><i class="fa fa-google"></i></li>
+                    </ul>
+                    
+                    <div class="buttons">
+                        
+                        <button class="btn btn-outline-primary px-4">Message</button>
+                        <button class="btn btn-primary px-4 ms-3">Contact</button>
+                    </div>
+                    
+                    
+                </div>
+                
+               
+                
+                
+            </div>
+            
+        </div>
+        
     </div>
-
-    <div>
-        <label><span>Texte</span></label>
-        <br>
-        <textarea class='arg' type='text' name='texte' cols='40'
-                    rows='5' maxlength='2000' spellcheck='true'></textarea>
-    </div>
-
-    <div>
-        <label><span>Créateur</span></label>
-        <br>
-        <input type=text name='createur' placeholder='{$_SESSION["login"]}' readonly required>
-    </div>
-
-    <div>
-        <input type='submit' value='Crée l article'>
-    </div>
-
-</form>
-</div> ");
-      echo('<br>');
-    }else {}
-
-  }else {}
-?>
+    
+</div>
 
 <script src="./js/bootstrap.js"></script>
-
 </body>
 </html>
+

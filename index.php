@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyBlog</title>
     <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
     <link
@@ -18,9 +18,9 @@
       <ul class="main-nav">
 
 <?php
+
             include ("connexion.php");
             session_start();
-
             if(isset($_SESSION['login']))  { 
                 // Si l'utilisateur logué
                    echo('<a href="archives.php">Les Archives</a> ');
@@ -46,7 +46,7 @@
 
               if (isset($_SESSION["login"]))
               { 
-              echo "<p>Compte: {$_SESSION["login"]} </p><a href='logout.php'>Déconnexion</a> <BR>";
+              echo "<a href='profil_detaille.php?id_miniblog={$_SESSION["id"]}'>Compte: {$_SESSION["login"]} </a><a href='logout.php'>Déconnexion</a> <BR>";
               }
 
 ?>
