@@ -78,7 +78,6 @@ echo("<div class='container mt-5'>
                 <span class='bg-secondary p-1 px-4 rounded text-white'>Membre</span>
                 <h5 class='mt-2 mb-0'>Login: {$_SESSION["login"]}</h5>
                 <h5 class='mt-2 mb-0'>Nom: {$_SESSION["nom"]}</h5>
-                <h5 class='mt-2 mb-0'>Prénom: {$_SESSION["prenom"]}</h5>
                 <div class='buttons'>
                   <a href='logout.php'>Déconnexion</a>
                 </div>
