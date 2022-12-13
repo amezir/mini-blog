@@ -56,59 +56,49 @@
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item txtfrm"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="profil_detaille.php">Profil</a></li>
   </ol>
 </nav>  
 
+<?php
 
-<div class="container mt-5">
+echo("<div class='container mt-5'>
     
-    <div class="row d-flex justify-content-center">
+<div class='row d-flex justify-content-center'>
+    
+    <div class='col-md-7'>
         
-        <div class="col-md-7">
+        <div class='card p-3 py-4'>
             
-            <div class="card p-3 py-4">
-                
-                <div class="text-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="100" class="rounded-circle">
+            <div class='text-center'>
+                <img src='https://cdn-icons-png.flaticon.com/512/1144/1144760.png' width='100' class='rounded-circle'>
+            </div>
+            
+            <div class='text-center mt-3'>
+                <span class='bg-secondary p-1 px-4 rounded text-white'>Membre</span>
+                <h5 class='mt-2 mb-0'>Login: {$_SESSION["login"]}</h5>
+                <h5 class='mt-2 mb-0'>Nom: {$_SESSION["nom"]}</h5>
+                <h5 class='mt-2 mb-0'>Prénom: {$_SESSION["prenom"]}</h5>
+                <div class='buttons'>
+                  <a href='logout.php'>Déconnexion</a>
                 </div>
-                
-                <div class="text-center mt-3">
-                    <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span>
-                    <h5 class="mt-2 mb-0">Alexender Schidmt</h5>
-                    <span>UI/UX Designer</span>
-                    
-                    <div class="px-4 mt-1">
-                        <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    
-                    </div>
-                    
-                     <ul class="social-list">
-                        <li><i class="fa fa-facebook"></i></li>
-                        <li><i class="fa fa-dribbble"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
-                        <li><i class="fa fa-linkedin"></i></li>
-                        <li><i class="fa fa-google"></i></li>
-                    </ul>
-                    
-                    <div class="buttons">
-                        
-                        <button class="btn btn-outline-primary px-4">Message</button>
-                        <button class="btn btn-primary px-4 ms-3">Contact</button>
-                    </div>
-                    
-                    
-                </div>
-                
-               
                 
                 
             </div>
+            
+           
+            
             
         </div>
         
     </div>
     
 </div>
+
+</div>")
+
+?>
+
 
 <script src="./js/bootstrap.js"></script>
 </body>

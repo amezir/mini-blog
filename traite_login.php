@@ -16,7 +16,7 @@ if ($stmt->rowcount()==1){
 		$_SESSION["login"]=$_GET["login"];
 		$_SESSION["id"]=$result["id_miniblog"];
 		$_SESSION["nom"]=$result["miniblog_nom"];
-		$_SESSION["nom"]=$result["miniblog_prenom"];
+		
         header ('Location:index.php');
 	} else {header ('Location:login.php?err=mdp');}
 
