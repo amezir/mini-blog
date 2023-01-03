@@ -52,8 +52,6 @@
 ?>
       </ul>
     </header>
-      </ul>
-    </header>
 
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -98,7 +96,78 @@
   }else {}
 ?>
 
-<script src="./js/bootstrap.js"></script>
 
+ <table class='table table-bordered'>
+  <h1>Articles list</h1>
+      <thead>
+        <tr>
+          <th scope='col'>id</th>
+          <th scope='col'>Article Titre</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Edition</th>
+        </tr>
+      </thead>
+
+
+<?php
+           $requete="SELECT * FROM articles";
+
+           $stmt=$db->query($requete);
+           $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
+
+           foreach($resultat as $articles){
+      echo("
+      <tbody>
+        <tr>
+          <th scope='row'>{$articles["id_articles"]}</th>
+          <td>{$articles["articles_titre"]}</td>
+          <td>{$articles["articles_heure"]}</td>
+          <td>
+          <a href='update.php?id={$articles["id_articles"]}'>Update</a>
+          </td>
+          <td>
+          <a href='delete.php?id_articles={$articles["id_articles"]}'>Delete</a>
+          </td>
+        </tr>       </tbody>");}
+?>
+    </table>
+
+
+    <table class='table table-bordered'>
+  <h1>Commentaires list</h1>
+      <thead>
+        <tr>
+          <th scope='col'>id</th>
+          <th scope='col'>texte</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Edition</th>
+        </tr>
+      </thead>
+
+
+<?php
+           $requete="SELECT * FROM commentaire";
+
+           $stmt=$db->query($requete);
+           $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
+
+           foreach($resultat as $commentaire){
+      echo("
+      <tbody>
+        <tr>
+          <th scope='row'>{$commentaire["id_commentaire"]}</th>
+          <td>{$commentaire["texte_commentaire"]}</td>
+          <td>{$commentaire["date_commentaire"]}</td>
+          <td>
+          <a href='update_com.php?id={$commentaire["id_commentaire"]}'>Update</a>
+          </td>
+          <td>
+          <a href='delete_com.php?id_commentaire={$commentaire["id_commentaire"]}'>Delete</a>
+          </td>
+        </tr>       </tbody>");}
+?>
+    </table>    
+
+<script src="./js/bootstrap.js"></script>
 </body>
 </html>
