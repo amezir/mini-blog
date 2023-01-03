@@ -101,7 +101,6 @@
   <h1>Articles list</h1>
       <thead>
         <tr>
-          <th scope='col'>id</th>
           <th scope='col'>Article Titre</th>
           <th scope='col'>Date</th>
           <th scope='col'>Edition</th>
@@ -119,7 +118,6 @@
       echo("
       <tbody>
         <tr>
-          <th scope='row'>{$articles["id_articles"]}</th>
           <td>{$articles["articles_titre"]}</td>
           <td>{$articles["articles_heure"]}</td>
           <td>
@@ -137,7 +135,6 @@
   <h1>Commentaires list</h1>
       <thead>
         <tr>
-          <th scope='col'>id</th>
           <th scope='col'>texte</th>
           <th scope='col'>Date</th>
           <th scope='col'>Edition</th>
@@ -155,7 +152,6 @@
       echo("
       <tbody>
         <tr>
-          <th scope='row'>{$commentaire["id_commentaire"]}</th>
           <td>{$commentaire["texte_commentaire"]}</td>
           <td>{$commentaire["date_commentaire"]}</td>
           <td>
