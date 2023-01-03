@@ -62,12 +62,16 @@
 
     // Si l'utilisateur logué est l'admin
     if ($_SESSION["id"] == 1){
+
+        $id =$_GET["id_articles"];
         $requete="SELECT * FROM articles WHERE id_articles=" . $_GET["id_articles"];
 
         $stmt=$db->query($requete);
         $resultat=$stmt->fetch(PDO::FETCH_ASSOC);
         $titre=$resultat["articles_titre"];
         $texte=$resultat["articles_texte"];
+
+
 
     echo("        <form action='traite_update.php' method='POST'>
     <div>
@@ -92,6 +96,8 @@
 </form>
 </div> ");
       echo('<br>');
+    //   $req = mysqli_query($db, "UPDATE articles SET articles_titre = '$titre' , articles_texte = '$texte' WHERE id_articles = $id");
+    //   $db->query($sql);
     }else {}
 
   }else {}

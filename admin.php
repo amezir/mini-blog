@@ -83,11 +83,6 @@ echo("    <nav aria-label='breadcrumb'>
 
     echo("        <form action='traitre_admin.php'>
     <div>
-        <label><span>Créateur</span></label>
-        <br>
-        <input type=text name='createur' placeholder='{$_SESSION["login"]}' readonly required>
-    </div>
-    <div>
         <label><span>Titre</span></label>
         <br>
         <input type=text name='titre' placeholder='Titre' required>
