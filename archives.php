@@ -82,8 +82,8 @@ echo "<h1 class='text-center'>Les Archives:</h1>";
                 <div class='card-body bg-muted'>
                   <h5 class='card-title'>{$articles["articles_titre"]}</h5>
                   <p class='card-text mt-4 txtfrm'>{$articles["articles_texte"]}</p>
-                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</h6>
-                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir les commentaires</a>
+                  <h6 class='card-subtitle mb-2 text-muted'>Créateur: admin {$articles["articles_heure"]}</h6>
+                  <a href='articles_detaille.php?id_articles={$articles["id_articles"]}' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Voir plus</a>
                 </div>
                 </div>
                 </div>

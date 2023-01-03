@@ -142,6 +142,9 @@ echo(" <table class='table table-bordered'>
           <td>{$articles["articles_titre"]}</td>
           <td>{$articles["articles_heure"]}</td>
           <td>
+          <a href='articles_detaille.php?id_articles={$articles["id_articles"]}'>Voir</a>
+          </td>
+          <td>
           <a href='update.php?id_articles={$articles["id_articles"]}'>Update</a>
           </td>
           <td>
