@@ -53,18 +53,34 @@
       </ul>
     </header>
 
-    <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item txtfrm"><a href="index.php">Home</a></li>
-    <li class="breadcrumb-item txtfrm"><a href="admin.php">Admin</a></li>
-  </ol>
-</nav> 
+
+
+<?php
+            if(isset($_SESSION['login']))  { 
+              // Si l'utilisateur logué
+
+                 
+             }else{
+              // Si l'utilisateur non logué
+              echo('<a href="index.php">back to home page</a> ');
+             }
+?>
+
+
 <?php     
    
    if (isset($_SESSION["login"])){
 
     // Si l'utilisateur logué est l'admin
     if ($_SESSION["id"] == 1){
+echo("    <nav aria-label='breadcrumb'>
+<ol class='breadcrumb'>
+  <li class='breadcrumb-item txtfrm'><a href='index.php'>Home</a></li>
+  <li class='breadcrumb-item txtfrm'><a href='admin.php'>Admin</a></li>
+</ol>
+</nav> ");
+
+
     echo("        <form action='traitre_admin.php'>
     <div>
         <label><span>Créateur</span></label>
@@ -96,8 +112,12 @@
   }else {}
 ?>
 
+<?php
+   if (isset($_SESSION["login"])){
 
- <table class='table table-bordered'>
+    // Si l'utilisateur logué est l'admin
+    if ($_SESSION["id"] == 1){
+echo(" <table class='table table-bordered'>
   <h1>Articles list</h1>
       <thead>
         <tr>
@@ -105,10 +125,11 @@
           <th scope='col'>Date</th>
           <th scope='col'>Edition</th>
         </tr>
-      </thead>
+      </thead>");
 
 
-<?php
+
+
            $requete="SELECT * FROM articles";
 
            $stmt=$db->query($requete);
@@ -121,17 +142,24 @@
           <td>{$articles["articles_titre"]}</td>
           <td>{$articles["articles_heure"]}</td>
           <td>
-          <a href='update.php?id={$articles["id_articles"]}'>Update</a>
+          <a href='update.php?id_articles={$articles["id_articles"]}'>Update</a>
           </td>
           <td>
           <a href='delete.php?id_articles={$articles["id_articles"]}'>Delete</a>
           </td>
         </tr>       </tbody>");}
+echo("</table>");
+
+    }else {}
+
+  }else {}
 ?>
-    </table>
+<?php
+   if (isset($_SESSION["login"])){
 
-
-    <table class='table table-bordered'>
+    // Si l'utilisateur logué est l'admin
+    if ($_SESSION["id"] == 1){
+echo("<table class='table table-bordered'>
   <h1>Commentaires list</h1>
       <thead>
         <tr>
@@ -139,10 +167,8 @@
           <th scope='col'>Date</th>
           <th scope='col'>Edition</th>
         </tr>
-      </thead>
+      </thead>");
 
-
-<?php
            $requete="SELECT * FROM commentaire";
 
            $stmt=$db->query($requete);
@@ -158,9 +184,13 @@
           <a href='delete_com.php?id_commentaire={$commentaire["id_commentaire"]}'>Delete</a>
           </td>
         </tr>       </tbody>");}
-?>
-    </table>    
 
+        echo("</table>");
+
+      }else {}
+
+    }else {}
+?>
 <script src="./js/bootstrap.js"></script>
 </body>
 </html>

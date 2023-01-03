@@ -62,23 +62,25 @@
 
     // Si l'utilisateur logué est l'admin
     if ($_SESSION["id"] == 1){
-        $requete="SELECT * FROM articles";
+        $requete="SELECT * FROM articles WHERE id_articles=" . $_GET["id_articles"];
 
         $stmt=$db->query($requete);
-        $resultat=$stmt->fetchall(PDO::FETCH_ASSOC);
+        $resultat=$stmt->fetch(PDO::FETCH_ASSOC);
+        $titre=$resultat["articles_titre"];
+        $texte=$resultat["articles_texte"];
 
-    echo("        <form action='traitre_update.php'>
+    echo("        <form action='traite_update.php' method='POST'>
     <div>
         <label><span>Titre</span></label>
         <br>
-        <input type=text name='titre' placeholder='' required>
+        <input type=text name='titre' value='$titre' required>
     </div>
 
     <div>
         <label><span>Texte</span></label>
         <br>
         <textarea class='arg' type='text' name='texte' cols='40'
-                    rows='5' maxlength='2000' spellcheck='true'></textarea>
+                    rows='5' maxlength='2000' spellcheck='true'>$texte</textarea>
     </div>
 
     <div>

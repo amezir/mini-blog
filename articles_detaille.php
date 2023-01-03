@@ -80,7 +80,7 @@ foreach($resultat as $articles){
     <div class='card-body bg-muted'>
       <h5 class='card-title'>{$articles["articles_titre"]}</h5>
       <p class='card-text mt-4 txtfrm'>{$articles["articles_texte"]}</p>
-      <h6 class='card-subtitle mb-2 text-muted'>Créateur: {$articles["articles_createur"]} {$articles["articles_heure"]}</h6>
+      <h6 class='card-subtitle mb-2 text-muted'>Créateur: admin {$articles["articles_heure"]}</h6>
     </div>
     </div>
     </div>
