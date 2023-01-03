@@ -159,9 +159,6 @@
           <td>{$commentaire["texte_commentaire"]}</td>
           <td>{$commentaire["date_commentaire"]}</td>
           <td>
-          <a href='update_com.php?id={$commentaire["id_commentaire"]}'>Update</a>
-          </td>
-          <td>
           <a href='delete_com.php?id_commentaire={$commentaire["id_commentaire"]}'>Delete</a>
           </td>
         </tr>       </tbody>");}
