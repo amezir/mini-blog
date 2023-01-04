@@ -16,7 +16,7 @@ echo 'Vous avez été déconnecté. Redirection automatique';
 <script>
 
 setTimeout(() => {
-    window.location="login.php";
+    window.location="index.php";
 },1500)
 
 </script>
