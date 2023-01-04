@@ -58,18 +58,25 @@
         <div class="carousel-item active">
           <img src="https://images.unsplash.com/photo-1558258021-971dd2148be5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="bd-placeholder-img img-fluid" alt="" width="100%"
             height="100%">
+            <div class="carousel-caption d-none d-md-block">
+        <h5>Blog qui parle du monde du rap français !</h5>
+      </div>
         </div>
 
         <div class="carousel-item">
           <img src="https://images.unsplash.com/photo-1609102026400-3c0ca378e4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1494&q=80" class="bd-placeholder-img img-fluid" alt="" width="100% "
             height="100%">
-          </svg>
+                  <div class="carousel-caption d-none d-md-block">
+        <h5>Un blog en PHP est un site Web qui utilise le langage de programmation PHP pour afficher du contenu dynamique. Il est adapté pour publier régulièrement du contenu et peut inclure des fonctionnalités avancées. Ils sont faciles à mettre en place et à gérer.</h5>
+      </div>
         </div>
 
         <div class="carousel-item">
           <img src="https://images.unsplash.com/photo-1554167725-89bf8ab26514?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="bd-placeholder-img img-fluid" alt="" width="100% "
             height="100%">
-          </svg>
+                  <div class="carousel-caption d-none d-md-block">
+        <h5>CRUD signifie Create, Read, Update et Delete. En PHP, cela permet de créer, lire, mettre à jour et supprimer des données dans une base de données. Ces fonctions sont couramment utilisées dans les applications web pour gérer la persistance des données.</h5>
+      </div>
         </div>
 
       </div>
