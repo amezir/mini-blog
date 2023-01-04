@@ -38,7 +38,7 @@ echo "Vout êtes déja connectée avec le compte : {$_SESSION["login"]} <a href=
                 <input type="text" name="prenom" required>
 
                 <h3 class="txtfrm">Mot de passe</h3>
-                <input type="text" name="pwd" required>
+                <input type="password" name="pwd" required>
 
                 <p class="formbtn">
                     <input type="submit" name="submit" value="S'inscrire">
