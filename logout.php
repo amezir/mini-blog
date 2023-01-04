@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBlog</title>
     <link href="./css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="icon" href="img/fav-ico.png">
 </head>
 <body>
 <?php
