@@ -73,11 +73,11 @@
 
 
 
-    echo("        <form action='traite_update.php' method='POST'>
+    echo("        <form action='traite_update.php?id_articles={$_GET["id_articles"]}' method='POST'>
     <div>
         <label><span>Titre</span></label>
         <br>
-        <input type=text name='titre' value='$titre' required>
+        <input type='text' name='titre' value='$titre' required>
     </div>
 
     <div>
